@@ -42,8 +42,9 @@ public class Main {
         for(int i = 0; i < 9; i ++){
 
             //for debugging to find error - off by one error!
-            System.out.println("index i roll 1 " + game.get(i).roll1);
-            System.out.println("index i+1 roll 1 " + game.get(i+1).roll1);
+//            System.out.println("index i roll 1 " + game.get(i).roll1);
+//            System.out.println("index i+1 roll 1 " + game.get(i+1).roll1);
+//            System.out.println("index i+2  roll 1 " + game.get(i+2).roll1);
 
             //regular case
             if (game.get(i).frameTotal < 10){
@@ -58,15 +59,24 @@ public class Main {
 
             //strikes case
              if (game.get(i).roll1 == 10){
-                 score+= game.get(i+1).roll1;
-                 if(game.get(i+1).roll1 == 10){
-                     score += game.get(i+2).roll1;
-                 } else {
+                 score+= game.get(i).roll1;
+                 if(game.get(i+1).roll1 == 10 && i < 8) {
+                     score += game.get(i + 1).roll1;
+                     score += game.get(i + 2).roll1;
+                 }
+                 //last frame special case
+                 if(game.get(i).roll1 == 10 && i == 8 && game.get(i+1).roll1 ==10){
+                     score += game.get(9).roll1;
+                     score += game.get(9).roll2;
+                 }
+                 else {
                      score += game.get(i+1).roll2;
                  }
              }
         }
+        System.out.println("The final frame total is "+game.get(9).frameTotal);
         score += game.get(9).frameTotal;
+
 
         System.out.println("The final score of this game is "+ score);
         return score;
