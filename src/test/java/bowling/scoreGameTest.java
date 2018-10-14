@@ -62,23 +62,23 @@ public class scoreGameTest {
         Frame frameC = new Frame(10,0);
         strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,0);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         frameC = new Frame(10,10,10);
-        spareGame.add(frameC);
+        strikeGame.add(frameC);
         //score is 300
     }
 
