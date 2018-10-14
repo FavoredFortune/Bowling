@@ -17,7 +17,7 @@ public class FrameGenerator {
                         " first 9 frames can exceed " + maxRoll+ " pins rolled over in any frame.");
 
         //generate initial 2 rolls of first Spare frame of game randomly
-        int roll1 = minRoll+(int) (Math.random()*(maxRoll-minRoll)+1);
+        int roll1 = minRoll+(int) (Math.random()*(maxRoll-minRoll-1)+1);
         System.out.println(roll1);
 
         int roll2 = maxRoll - roll1;
@@ -28,7 +28,7 @@ public class FrameGenerator {
 
         //create next 8 frames of game
         for(int i = 1; i < 9; i++) {
-            roll1 = minRoll+(int) (Math.random()*(maxRoll-minRoll)+1);
+            roll1 = minRoll+(int) (Math.random()*(maxRoll-minRoll-1)+1);
             System.out.println(roll1);
 
             roll2 = maxRoll - roll1;
@@ -39,7 +39,7 @@ public class FrameGenerator {
         }
 
         //create last, special 10th frame of game
-        roll1 = minRoll+ (int) (Math.random()*(maxRoll-minRoll)+1);
+        roll1 = minRoll+ (int) (Math.random()*(maxRoll-minRoll-1)+1);
         roll2 = maxRoll - roll1;
         int roll3 = minRoll+(int) (Math.random()*(maxRoll-minRoll)+1);
 

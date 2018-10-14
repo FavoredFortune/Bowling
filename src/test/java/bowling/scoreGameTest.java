@@ -89,4 +89,12 @@ public class scoreGameTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void scoreGameSpareTest() {
+        int actual = Main.scoreGame(spareGame);
+        int expected = 150;
+
+        assertEquals(expected, actual);
+    }
 }
