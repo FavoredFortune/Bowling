@@ -11,7 +11,7 @@ The application will return the final scores of different game scores. Each game
 - Regular frames are scored by adding the 2 rolls together, and will never = 10.
 - Spare frames are when two rolls in a frame add up to 10. In this case the next roll, from the next frame is added 
 to the initial frame's two rolls (i.e. Frame 1:roll 1 + Frame 1:roll 2 + Frame 2:roll3).
-- Strikes are when the first roll of a frame is 10 points. In this case the next two rolls (from the next frame(s) 
+- Strikes are when the first roll of a frame is 10 points. In this case the next two rolls (from the next frame(s)) 
 are added to the total for the score of initial strike frame. *
 
 
