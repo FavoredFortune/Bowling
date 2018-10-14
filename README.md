@@ -34,3 +34,6 @@ initial strike frame.
 
 ##Resources
 
+- Reminder of printing from within an array list [StackOverflow](https://stackoverflow.com/questions/10168066/how-to-print-out-all-the-elements-of-a-list-in-java)
+- 
+
