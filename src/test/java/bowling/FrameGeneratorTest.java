@@ -23,4 +23,9 @@ public class FrameGeneratorTest {
     public void frameGeneratorStrikesTest() {
         ArrayList<Frame> game = FrameGenerator.frameGenerator("strikes", 10, 0);
     }
+
+    @Test
+    public void strikeFrameGeneratorTest() {
+        ArrayList<Frame> game = FrameGenerator.strikeFrameGenerator("strike");
+    }
 }

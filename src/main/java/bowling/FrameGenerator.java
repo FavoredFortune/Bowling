@@ -78,12 +78,14 @@ public class FrameGenerator {
             scores.add(frame);
         }
 
+        System.out.println("Last Frame: ");
         //create last, special 10th frame of game
-        roll1 = 10;
-        roll2 = 10;
-        int roll3 = 10;
+        int roll = 10;
+        System.out.println(roll);
+        System.out.println(roll);
+        System.out.println(roll);
 
-        frame = new Frame(roll1, roll2, roll3);
+        frame = new Frame(roll, roll, roll);
         scores.add(frame);
 
         //return full game of 10 frame scores
