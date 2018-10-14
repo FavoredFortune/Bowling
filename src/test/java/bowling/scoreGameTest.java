@@ -55,7 +55,7 @@ public class scoreGameTest {
         spareGame.add(frameB);
         frameB = new Frame(5,5);
         spareGame.add(frameB);
-        frameB = new Frame(5,5,0);
+        frameB = new Frame(5,5,5);
         spareGame.add(frameB);
 
         //total score is 300
