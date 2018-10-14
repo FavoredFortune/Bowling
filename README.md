@@ -1,10 +1,11 @@
 # Bowling
+Return final bowling game score of a game. 
 
-#Sooz Richman (Favored Fortune)
+#Sooz (aka Suzanne) Richman (Favored Fortune)
 
 ##Overview
 
-Welcome to this command line application that generates bowling games and their final scores.
+Welcome to this application that generates bowling games and their final scores.
 This means it constructs a game of 2 rolls per frame, for 9 frames and the 10th frame has 3 rolls.
 The application will return the final scores of different game scores. Each game calculated will have 10 total frames.
 
