@@ -27,6 +27,7 @@ are added to the total for the score of initial strike frame. *
 
 - Java 1.8 (aka Java 8)
 - Gradle
+- JUnit 4.2
 - Git
 - GitHub
 - IntelliJ Ultimate
