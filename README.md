@@ -1,8 +1,8 @@
 # Bowling
 
-#Sooz Richman (Favored Fortune)
+# Sooz Richman (Favored Fortune)
 
-##Overview
+## Overview
 
 Welcome to this command line application that generates bowling games and their final scores.
 This means it constructs a game of 2 rolls per frame, for 9 frames and the 10th frame has 3 rolls.
@@ -23,7 +23,7 @@ are added to the total for the score of initial strike frame. *
 - Follow prompts in IDE Console
 
 
-##Technologies Used
+## Technologies Used
 
 - Java 1.8 (aka Java 8)
 - Gradle
@@ -31,7 +31,7 @@ are added to the total for the score of initial strike frame. *
 - GitHub
 - IntelliJ Ultimate
 
-##Resources
+## Resources
 
 - Reminder of printing from within an array list [StackOverflow](https://stackoverflow.com/questions/10168066/how-to-print-out-all-the-elements-of-a-list-in-java)
 - *Scoring of Strikes from [Wikipedia](https://en.wikipedia.org/wiki/Strike_(bowling))
