@@ -90,34 +90,26 @@ public class Main {
         strikeGame.add(frameC);
         //score is 300
 
-        try{ Thread.sleep(2000);
-        } catch(Exception e){
-            e.printStackTrace();
-        }
+        //giving reader time to consume initial message
+        sleep(5000);
 
+        System.out.println("See a regular game score: ");
         scoreGame(regularGame);
-        try{ Thread.sleep(1000);
-        } catch(Exception e){
-            e.printStackTrace();
-        }
+        sleep(1000);
+
+        System.out.println("See a spare game score: ");
         scoreGame(spareGame);
-        try{ Thread.sleep(1000);
-        } catch(Exception e){
-            e.printStackTrace();
-        }
+        sleep(1000);
+
+        System.out.println("See a strike game score: ");
         scoreGame(strikeGame);
-        try{ Thread.sleep(1000);
-        } catch(Exception e){
-            e.printStackTrace();
-        }
+        sleep(1000);
 
         System.out.println("Thanks for playing!");
-        try{ Thread.sleep(1000);
-        } catch(Exception e){
-            e.printStackTrace();
-        }
+        sleep(1000);
         System.out.println("\nIf you'd like to see randomly generate bowling rolls and then see a game scored then " +
-                "please go into the IDE and run \"FrameGenerator\" for more fun.");
+                "please go into the IDE and run \"FrameGenerator\" for more fun. Don't forget to checkout the " +
+                "README file for fun bowling facts and history.");
     }
 
     public static int scoreGame(ArrayList<Frame> game) {
@@ -129,7 +121,7 @@ public class Main {
 
         //edge case that the game provided has no scores
         if(size == 0){
-            System.out.println("Hmm. That's strange. It looks like this game has no scores. \nTotal game score of ");
+            System.out.println("Hmm. That's strange. It looks like this game has no scores.");
             return score;
         }
 
@@ -167,6 +159,15 @@ public class Main {
         score += game.get(9).frameTotal;
         System.out.println("The final score of this game is "+ score +"!\n");
         return score;
+    }
+
+    //helper function to make console print lines slower and easier to read for people
+    //throughout both applications
+    public static void sleep(int milliseconds){
+        try{ Thread.sleep(milliseconds);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
 

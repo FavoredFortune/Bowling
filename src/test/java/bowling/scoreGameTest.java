@@ -12,8 +12,11 @@ public class scoreGameTest {
     ArrayList<Frame> spareGame = new ArrayList<>();
     ArrayList<Frame> strikeGame = new ArrayList<>();
 
+    //set up all the ArrayLists for each game type, where each ArrayList element
+    //is a Frame object, as defined in the Frame constructor class.
     @Before
     public void setUp(){
+        //regular game
         //total score is 40
         Frame frame = new Frame(2,2);
         regularGame.add(frame);
@@ -36,6 +39,7 @@ public class scoreGameTest {
         frame = new Frame(2,2);
         regularGame.add(frame);
 
+        //spares game
         //total score is 150
         Frame frameB = new Frame(5,5);
         spareGame.add(frameB);
@@ -58,6 +62,7 @@ public class scoreGameTest {
         frameB = new Frame(5,5,5);
         spareGame.add(frameB);
 
+        //perfect strikes game
         //total score is 300
         Frame frameC = new Frame(10,0);
         strikeGame.add(frameC);
