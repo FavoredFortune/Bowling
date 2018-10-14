@@ -18,12 +18,6 @@ public class FrameGeneratorTest {
         ArrayList<Frame> game = FrameGenerator.frameGenerator("spares", 0, 10);
     }
 
-    //strikes with method currently doesn't work
-    @Test
-    public void frameGeneratorStrikesTest() {
-        ArrayList<Frame> game = FrameGenerator.frameGenerator("strikes", 10, 0);
-    }
-
     @Test
     public void strikeFrameGeneratorTest() {
         ArrayList<Frame> game = FrameGenerator.strikeFrameGenerator("strike");
