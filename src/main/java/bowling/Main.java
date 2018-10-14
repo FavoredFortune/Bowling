@@ -8,19 +8,24 @@ public class Main {
     //main method here acts as a main test harness for the primary method - score games
     //purpose of application is to return the score of games
     public static void main(String[] args) {
-//        game = FrameGenerator.frameGenerator("spares", 0, 10);
-//        scoreGame(game);
+        System.out.println("Welcome to this bowling score generator. You will next see the rolls of 10 frames/sets of" +
+                " 3 full games of bowling. The first will be a regular \"poor\" game where no roll is over 5 and no " +
+                        "frame (a set of 2 rolls, but for the last frame which can be up to 3 rolls) over 9 points. " +
+                        "The next game will be a game of spares, where each frame (a set of two rolls) will equal 10 " +
+                        "points. The last game scored will be a game of all strikes. Enjoy!" );
 
-        game = FrameGenerator.frameGenerator("regular", 0, 5);
+        //        game = FrameGenerator.frameGenerator("regular", 0, 5);
+        //        scoreGame(game);
+        game = FrameGenerator.frameGenerator("spares", 0, 10);
         scoreGame(game);
-//
+
 //        game = FrameGenerator.strikeFrameGenerator("strikes");
 //        scoreGame(game);
     }
 
 
 
-    private static int scoreGame(ArrayList<Frame> game) {
+    public static int scoreGame(ArrayList<Frame> game) {
 
         //value that will be used to iterate through each frame and create a sum of all the frame scores
         int score = 0;
