@@ -13,8 +13,8 @@ public class FrameGenerator {
         ArrayList<Frame> scores = new ArrayList<>();
 
         //game type
-        System.out.println("This is a " + type + " bowling game where no roll exceeds " + maxRoll +"\nAnd none of the" +
-                        " first 9 frames can exceed " + maxRoll+ " pins rolled over.");
+        System.out.println("This is a " + type + " bowling game where no roll exceeds " + maxRoll +"\nand none of the" +
+                        " first 9 frames can exceed " + maxRoll+ " pins rolled over in any frame.");
 
         //generate initial 2 rolls of first Spare frame of game randomly
         int roll1 = minRoll+(int) (Math.random()*(maxRoll-minRoll)+1);
