@@ -23,7 +23,9 @@ are added to the total for the score of initial strike frame. *
 - Refresh Gradle Build
 - Choose to run the Main.java file from Run in the IDE menu**
 - Follow prompts in IDE Console
-- Note that each application runs quickly and you may have to scroll up in the console to see all contents
+- Note that to make each application a bit easier to read, Thread.sleep has been used throughout to pace the content 
+displayed in the console to be a bit slower, but some may still find the need to scroll to the top and then scroll 
+down to see what the application did.
 
 ** - There is a hidden bonus application! Follow the instructions at the end of the Main application console readout.
 You can get instructions to see bowling games randomly generated and then properly scored as many times as you like 
