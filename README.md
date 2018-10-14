@@ -35,5 +35,5 @@ are added to the total for the score of initial strike frame. *
 
 - Reminder of printing from within an array list [StackOverflow](https://stackoverflow.com/questions/10168066/how-to-print-out-all-the-elements-of-a-list-in-java)
 - *Scoring of Strikes from [Wikipedia](https://en.wikipedia.org/wiki/Strike_(bowling))
-- 
+- *Scoring of perfect game [Slocums Homestead](http://slocums.homestead.com/gamescore.html)
 

@@ -49,4 +49,44 @@ public class FrameGenerator {
         //return full game of 10 frame scores
         return scores;
     }
+
+    public static ArrayList<Frame> strikeFrameGenerator(String type){
+        ArrayList<Frame> scores = new ArrayList<>();
+
+        //game type
+        System.out.println("This is a " + type + " bowling game where ever roll is a strike.");
+
+        //generate initial 2 rolls of first Spare frame of game randomly
+        int roll1 = 10;
+        System.out.println(roll1);
+
+        int roll2 = 10 - roll1;
+        System.out.println(roll2);
+
+        Frame frame = new Frame(roll1, roll2);
+        scores.add(frame);
+
+        //create next 8 frames of game
+        for(int i = 1; i < 9; i++) {
+            roll1 = 10;
+            System.out.println(roll1);
+
+            roll2 = 10 - roll1;
+            System.out.println(roll2);
+
+            frame = new Frame(roll1, roll2);
+            scores.add(frame);
+        }
+
+        //create last, special 10th frame of game
+        roll1 = 10;
+        roll2 = 10;
+        int roll3 = 10;
+
+        frame = new Frame(roll1, roll2, roll3);
+        scores.add(frame);
+
+        //return full game of 10 frame scores
+        return scores;
+    }
 }
