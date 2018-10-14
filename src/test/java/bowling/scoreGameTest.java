@@ -79,7 +79,6 @@ public class scoreGameTest {
         strikeGame.add(frameC);
         frameC = new Frame(10,10,10);
         strikeGame.add(frameC);
-        //score is 300
     }
 
     @Test

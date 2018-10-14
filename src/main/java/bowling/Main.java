@@ -2,28 +2,123 @@ package bowling;
 
 import java.util.ArrayList;
 
-public class Main {
-    public static ArrayList<Frame> game = new ArrayList<>();
+//This was the requested primary method - scoreGame - discussed on Friday.
+//It is also tested using JUnit 4.2 - tests can be found in the test folder in
+//the scoreGameTest file
 
-    //main method here acts as a main test harness for the primary method - score games
+public class Main {
+
+    //creating games for use by main method as a primary testing harness/interaction
+    //interface for users so they can see the primary application in action
+    public static ArrayList<Frame> regularGame = new ArrayList<>();
+    public static ArrayList<Frame> spareGame = new ArrayList<>();
+    public static ArrayList<Frame> strikeGame = new ArrayList<>();
+
     //purpose of application is to return the score of games
     public static void main(String[] args) {
-        System.out.println("Welcome to this bowling score generator. You will next see the rolls of 10 frames/sets of" +
-                " 3 full games of bowling. The first will be a regular \"poor\" game where no roll is over 5 and no " +
-                        "frame (a set of 2 rolls, but for the last frame which can be up to 3 rolls) over 9 points. " +
-                        "The next game will be a game of spares, where each frame (a set of two rolls) will equal 10 " +
-                        "points. The last game scored will be a game of all strikes. Enjoy!" );
+        System.out.println("\nWelcome to this bowling score generator! \nYou will now see the scores of a " +
+                "regular game, a game of all spares and a game of strikes. \nEnjoy!\n" );
 
-        //        game = FrameGenerator.frameGenerator("regular", 0, 5);
-        //        scoreGame(game);
-        game = FrameGenerator.frameGenerator("spares", 0, 10);
-        scoreGame(game);
+        //BUILDING ALL THE GAMES HERE FOR USE BY PRIMARY (SCOREGAME) METHOD
+        //Regular Game
+        //total score is 40
+        Frame frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
+        frame = new Frame(2,2);
+        regularGame.add(frame);
 
-//        game = FrameGenerator.strikeFrameGenerator("strikes");
-//        scoreGame(game);
+        //Spares game
+        //total score is 150
+        Frame frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5);
+        spareGame.add(frameB);
+        frameB = new Frame(5,5,5);
+        spareGame.add(frameB);
+
+        //Perfect game of all strikes
+        //total score is 300
+        Frame frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,0);
+        strikeGame.add(frameC);
+        frameC = new Frame(10,10,10);
+        strikeGame.add(frameC);
+        //score is 300
+
+        try{ Thread.sleep(2000);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+        scoreGame(regularGame);
+        try{ Thread.sleep(1000);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        scoreGame(spareGame);
+        try{ Thread.sleep(1000);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        scoreGame(strikeGame);
+        try{ Thread.sleep(1000);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+        System.out.println("Thanks for playing!");
+        try{ Thread.sleep(1000);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("\nIf you'd like to see randomly generate bowling rolls and then see a game scored then " +
+                "please go into the IDE and run \"FrameGenerator\" for more fun.");
     }
-
-
 
     public static int scoreGame(ArrayList<Frame> game) {
 
@@ -40,11 +135,6 @@ public class Main {
 
         //iterate through game scores for each frame except special case, last frame
         for(int i = 0; i < 9; i ++){
-
-            //for debugging to find error - off by one error!
-//            System.out.println("index i roll 1 " + game.get(i).roll1);
-//            System.out.println("index i+1 roll 1 " + game.get(i+1).roll1);
-//            System.out.println("index i+2  roll 1 " + game.get(i+2).roll1);
 
             //regular case
             if (game.get(i).frameTotal < 10){
@@ -64,7 +154,7 @@ public class Main {
                      score += game.get(i + 1).roll1;
                      score += game.get(i + 2).roll1;
                  }
-                 //last frame special case
+                 //last frame special case for perfect game
                  if(game.get(i).roll1 == 10 && i == 8 && game.get(i+1).roll1 ==10){
                      score += game.get(9).roll1;
                      score += game.get(9).roll2;
@@ -74,11 +164,8 @@ public class Main {
                  }
              }
         }
-        System.out.println("The final frame total is "+game.get(9).frameTotal);
         score += game.get(9).frameTotal;
-
-
-        System.out.println("The final score of this game is "+ score);
+        System.out.println("The final score of this game is "+ score +"!\n");
         return score;
     }
 }
