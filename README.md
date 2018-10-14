@@ -3,6 +3,7 @@ Return final bowling game score of a game.
 
 # Sooz (aka Suzanne) Richman (Favored Fortune)
 
+
 ## Overview
 
 Welcome to this application that generates bowling games and their final scores.
